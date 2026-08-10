@@ -1,0 +1,32 @@
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Databases (SQLite)
+*.db
+*.sqlite3
+*.sqlite
+gt_beauty.db
+
+# Secrets & Environment variables
+.env
+.env.local
+*.pem
+
+# IDEs & Editors settings
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
