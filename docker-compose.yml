@@ -1,0 +1,19 @@
+services:
+  gt_business_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gt_labs_business_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist SQLite database outside the container
+      - bot_data:/app/data
+    environment:
+      # Override DB_URL to store database inside the mounted volume
+      - DB_URL=sqlite+aiosqlite:////app/data/gt_beauty.db
+
+volumes:
+  bot_data:
+    driver: local
