@@ -157,6 +157,30 @@ python main.py
 
 ---
 
+### 🐳 Run with Docker (Recommended for Production)
+
+1. Make sure Docker and Docker Compose are installed.
+2. Configure your `.env` file from `.env.example`.
+3. Launch the containerized bot:
+
+```bash
+docker compose up -d --build
+```
+
+To view live application logs:
+
+```bash
+docker compose logs -f
+```
+
+To stop the container:
+
+```bash
+docker compose down
+```
+
+---
+
 ## 🔒 Security Measures
 
 1. **Role-Based Access Control:** Admin endpoints use explicit numeric User ID checks (`message.from_user.id == config.ADMIN_ID`). Telegram usernames are ignored for auth due to spoofing risks.
